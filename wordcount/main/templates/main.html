@@ -1,0 +1,85 @@
+<body>
+  <title>WORDCOUNT</title>
+  <header> 
+    <h1>Wordcount!</h1>
+    </header>
+  <div class="container">
+    <form action={% url 'result' %} method='GET'>
+      <textarea name='text'class="input-field" placeholder="Enter a value..."></textarea>
+      <button type="submit" class="button">submit</button>
+    </form>
+  </div>
+  <a href={% url 'about' %}>about</a>
+</body>
+<style>
+  body {
+    text-align: center;
+    background-color: #f7e8e8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  header {
+    background-color: #ffa6c9;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff80b3;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  p {
+    font-size: 24px;
+    margin: 20px;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #ff80b3;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  .button:hover {
+    background-color: #ff5c8a;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .input-field {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+  }
+</style>

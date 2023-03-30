@@ -1,0 +1,40 @@
+<body>
+    <title>WORDCOUNT</title>
+    <header> 
+        <h1> 결과 </h1>
+    </header>
+<a href = {% url 'main' %}>메인으로</a>
+<hr>
+{% for word, value in words %}
+ {{word}} 
+ count: {{value}}
+</br>
+{% endfor %}
+</body>
+<style>
+    body {
+    text-align: center;
+    background-color: #f7e8e8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+  header {
+    background-color: #ffa6c9;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff80b3;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+</style>
